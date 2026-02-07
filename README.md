@@ -130,10 +130,10 @@ The gallery currently uses placeholder SVG images. To add your own photos:
 
 All messages can be edited in `index.html`:
 
-- **Opening message**: Lines 32-44
-- **The big question**: Line 49
-- **Love letter**: Lines 68-93
-- **Gallery captions**: Throughout gallery section
+- **Opening message**: In the `<section class="opening-message">` section
+- **The big question**: In the `<section class="question-section">` section
+- **Love letter**: In the `<div class="love-letter">` section
+- **Gallery captions**: In each `<p class="gallery-caption">` element
 
 ### Change "My Oasis" to Another Name
 
@@ -148,14 +148,14 @@ Search and replace "My Oasis" or "Oasis" with your preferred term:
    - Format: MP3 or WAV
    - Add to project folder
 
-2. **Update JavaScript** (in `script.js`, line 338):
+2. **Update JavaScript** (in `script.js`, in the `playBackgroundMusic` function):
    ```javascript
    backgroundMusic = new Audio('your-song.mp3');
    ```
 
 ### Adjust Colors
 
-Edit color variables in `styles.css` (lines 7-15):
+Edit color variables in `styles.css` (in the `:root` selector at the top of the file):
 ```css
 :root {
     --primary-pink: #FFB6C1;      /* Change to your preference */
@@ -166,7 +166,7 @@ Edit color variables in `styles.css` (lines 7-15):
 
 ### Disable Specific Effects
 
-In `script.js`, comment out effects you don't want in the `handleYesClick` function (lines 153-165):
+In `script.js`, comment out effects you don't want in the `handleYesClick` function:
 ```javascript
 // setTimeout(() => triggerConfetti(), 200);  // Disable confetti
 // setTimeout(() => triggerFireworks(), 500); // Disable fireworks

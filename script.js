@@ -334,7 +334,8 @@ function playBackgroundMusic() {
     // Try to play (may be blocked by browser autoplay policy)
     backgroundMusic.play().catch(() => {
         // Autoplay was prevented, user will need to click music button
-        console.log('Autoplay prevented, please click music button');
+        isMusicPlaying = false;
+        updateMusicButton();
     });
     
     isMusicPlaying = true;
